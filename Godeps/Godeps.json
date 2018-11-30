@@ -1,0 +1,28 @@
+{
+	"ImportPath": "github.com/rking788/alexa-slickdeals",
+	"GoVersion": "go1.11",
+	"GodepVersion": "v80",
+	"Packages": [
+		"./..."
+	],
+	"Deps": [
+		{
+			"ImportPath": "github.com/gorilla/mux",
+			"Comment": "v1.6.0-6-g5ab525f",
+			"Rev": "5ab525f4fb1678e197ae59401e9050fa0b6cb5fd"
+		},
+		{
+			"ImportPath": "github.com/mikeflynn/go-alexa/skillserver",
+			"Rev": "a6af545a423613c641bf760600e729115d0eabd2"
+		},
+		{
+			"ImportPath": "github.com/mikeflynn/go-alexa/skillserver/dialog",
+			"Rev": "a6af545a423613c641bf760600e729115d0eabd2"
+		},
+		{
+			"ImportPath": "github.com/urfave/negroni",
+			"Comment": "v1.0.0-22-g7183f09",
+			"Rev": "7183f09c600e83777e78b44b39fcccab3b8c0dad"
+		}
+	]
+}
