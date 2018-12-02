@@ -96,9 +96,13 @@ func handleAboutIntent() *skillserver.EchoResponse {
 }
 
 func handleHelpIntent() *skillserver.EchoResponse {
-	response := skillserver.NewEchoResponse()
-	response.OutputSpeech("Help regarding the available commands here.")
-	response.SimpleCard("Frontpage Deals", "Help regarding the available commands here.")
 
-	return response
+	response := skillserver.NewEchoResponse()
+	builder := skillserver.NewSSMLTextBuilder()
+
+	builder.AppendSentence("Here are some things you can ask: ")
+	builder.AppendSentence("Give me the frontpage deals.")
+	builder.AppendSentence("Give me the popular deals.")
+
+	return response.OutputSpeechSSML(builder.Build())
 }
