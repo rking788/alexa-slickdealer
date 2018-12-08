@@ -32,6 +32,12 @@ var (
 			OnLaunch:       launchHandler,
 			OnSessionEnded: sessionEndedHandler,
 		},
+		"/health": skillserver.StdApplication{
+			Methods: "GET",
+			Handler: func(w http.ResponseWriter, r *http.Request) {
+				w.Write([]byte("Ok!"))
+			},
+		},
 	}
 )
 
